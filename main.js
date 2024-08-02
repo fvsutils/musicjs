@@ -8,6 +8,8 @@ window.onload = function () {
             item = getChords()[$(this).attr('chord')]
         } else if ($(this).attr('scale')) {
             item = getScales()[$(this).attr('scale')]
+        } else if ($(this).attr('notes')) {
+            item = $(this).attr('notes').split(',')
         }
         drawInCanvas(canvas[0], keyWidth, item)
         $(this).append(canvas)
